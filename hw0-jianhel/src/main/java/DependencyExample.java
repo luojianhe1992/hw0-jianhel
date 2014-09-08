@@ -8,10 +8,11 @@ import edu.stanford.nlp.process.Tokenizer;
 public class DependencyExample {
 
     public static void main(String[] args){
+      String s = "I'm feeling good"; 
       TokenizerFactory<Word> factory =
                PTBTokenizerFactory.newTokenizerFactory();
       Tokenizer<Word> tokenizer=
-              factory.getTokenizer(new StringReader(args[0]));
+              factory.getTokenizer(new StringReader(s));
       System.out.println(tokenizer.tokenize());
     }
   
